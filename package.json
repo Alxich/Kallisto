@@ -1,0 +1,18 @@
+{
+  "name": "kallisto",
+  "version": "1.0.1",
+  "description": "This is wordpress theme made by Concept1.The theme name is kallisto wich used to make good site and products",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Concept1"
+  ],
+  "author": "Roman Dydnuk",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
