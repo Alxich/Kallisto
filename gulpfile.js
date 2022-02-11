@@ -22,6 +22,7 @@ global.app = {
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { scss } from "./gulp/tasks/scss.js";
+import { js } from "./gulp/tasks/app.js";
 
 // File change watcher in ./source/src/...
 
@@ -32,10 +33,13 @@ function wathcer() {
     gulp.watch(
         path.watch.scss, scss
     );
+    gulp.watch(
+        path.watch.js, js
+    );
 }
 
 // Main tasks to do
-const mainTasks = gulp.parallel(copy, scss)
+const mainTasks = gulp.parallel(copy, scss, js)
 
 // Executing the Default Script
 const dev = gulp.series(reset, mainTasks, gulp.parallel(wathcer));

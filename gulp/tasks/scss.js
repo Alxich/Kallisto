@@ -16,7 +16,7 @@ const sass = gulpSass(dartSass)
 export const scss = () => {
     return app.gulp.src(
         app.path.src.scss, {
-            sourcemap: true
+            sourcemaps: true
         }
     )
         .pipe(
