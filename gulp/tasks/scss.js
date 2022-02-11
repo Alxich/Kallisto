@@ -16,7 +16,7 @@ const sass = gulpSass(dartSass)
 export const scss = () => {
     return app.gulp.src(
         app.path.src.scss, {
-            sourcemaps: true
+            sourcemaps: app.isDev
         }
     )
         .pipe(
@@ -33,17 +33,26 @@ export const scss = () => {
             })
         )
         .pipe(
-            groupCssMediaQueries()
+            app.plugins.if(
+                app.isBuild,
+                groupCssMediaQueries()
+            )
         )
         .pipe(
-            autoprefixer({
-                grid: true,
-                overrideBrowserslist: ["last 3 versions"],
-                cascade: true
-            })
+            app.plugins.if(
+                app.isBuild,
+                autoprefixer({
+                    grid: true,
+                    overrideBrowserslist: ["last 3 versions"],
+                    cascade: true
+                })
+            )
         )
         .pipe(
-            cleanCss()
+            app.plugins.if(
+                app.isBuild,
+                cleanCss()
+            )
         )
         .pipe(
             rename({
