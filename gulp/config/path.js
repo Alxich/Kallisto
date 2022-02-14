@@ -17,8 +17,8 @@ const srcFolder = `./source/src`;
 // General object where will contain all path to files in project
 export const path = {
     build: {
-        js: `${buildFolder}/js/`,
-        css: `${buildFolder}/css/`,
+        js: `${buildFolder}/`,
+        css: `${buildFolder}/`,
         files: `${buildFolder}/`
     },
     src: {

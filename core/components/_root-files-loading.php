@@ -7,46 +7,52 @@
  */
 
 // Add our custom index template to the top of the index template queue
-add_filter( 'index_template_hierarchy', function( $templates ) {
-    array_unshift( $templates, '/core/template-parts/index.php' );
-    return $templates;
-});
-// Add our custom 404 template to the top of the 404 template queue
-add_filter( '404_template_hierarchy', function( $templates ) {
-    array_unshift( $templates, '/core/template-parts/404.php' );
-    return $templates;
-});
-// Add our custom archive template to the top of the archive template queue
-add_filter( 'archive_template_hierarchy', function( $templates ) {
-    array_unshift( $templates, '/core/template-parts/archive.php' );
-    return $templates;
-});
-// Add our custom single template to the top of the single template queue
-add_filter( 'single_template_hierarchy', function( $templates ) {
-    array_unshift( $templates, '/core/template-parts/single.php' );
-    return $templates;
-});
-// Add our custom search template to the top of the search template queue
-add_filter( 'search_template_hierarchy', function( $templates ) {
-    array_unshift( $templates, '/core/template-parts/search.php' );
-    return $templates;
-});
-// Add our custom page template to the top of the page template queue
-add_filter( 'page_template_hierarchy', function( $templates ) {
-    array_unshift( $templates, '/core/template-parts/page.php' );
-    return $templates;
-});
-// Add our custom comments template to the top of the comments template queue
-add_filter( 'comments_template', 'my_plugin_comment_template' );
-function my_plugin_comment_template( $comment_template ){
-    global $post;
+function change_template_path($templates) {
 
-    if ( !( is_singular() && ( have_comments() || 'open' == $post->comment_status ) ) ) {
-        return __DIR__ . '/core/template-parts/comments.php';
+    // The custom sub-directory for page templates in your theme.
+    $custom_sub_dir = 'core/template-parts';
+
+    // Don't use the custom template directory in unexpected cases.
+    if(empty($templates) || ! is_array($templates)) {
+        return $templates;
     }
-    if( $post ){
-        return __DIR__ . '/core/template-parts/comments.php';
+
+    $page_template_id = 0;
+    $count = count( $templates);
+    if($templates[0] === get_page_template_slug()) {
+        // if there is a custom template, then our page-{slug}.php template is at the next index
+        $page_template_id = 1;
     }
+
+    // The last one in $templates is page.php, single.php, or archives.php depending on the type of template hierarchy being read.
+    // Paths of all items starting from $page_template_id will get updated
+    for($i = $page_template_id; $i < $count ; $i++) {
+        $templates[$i] = $custom_sub_dir . '/' . $templates[$i];
+    }
+
+    return $templates;
 }
+
+// Add filters to override the path for each WP template hierarchy.
+// These are all the template hierarchy filters. You should probably only override the ones you need.
+add_filter('404_template_hierarchy', 'change_template_path');
+add_filter('archive_template_hierarchy', 'change_template_path');
+add_filter('attachment_template_hierarchy', 'change_template_path');
+add_filter('author_template_hierarchy', 'change_template_path');
+add_filter('category_template_hierarchy', 'change_template_path');
+add_filter('date_template_hierarchy', 'change_template_path');
+add_filter('embed_template_hierarchy', 'change_template_path');
+add_filter('frontpage_template_hierarchy', 'change_template_path');
+add_filter('home_template_hierarchy', 'change_template_path');
+// If you override the index hierarchy, be sure to add an index.php template in your custom template folder.
+//add_filter('index_template_hierarchy', 'change_template_path');
+add_filter('page_template_hierarchy', 'change_template_path');
+add_filter('paged_template_hierarchy', 'change_template_path');
+add_filter('privacypolicy_template_hierarchy', 'change_template_path');
+add_filter('search_template_hierarchy', 'change_template_path');
+add_filter('single_template_hierarchy', 'change_template_path');
+add_filter('singular_template_hierarchy', 'change_template_path');
+add_filter('tag_template_hierarchy', 'change_template_path');
+add_filter('taxonomy_template_hierarchy', 'change_template_path');
 
 ?>

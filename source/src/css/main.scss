@@ -14,8 +14,8 @@ Version: 1.0.0
 *
 */
 
-/*Importing font-styles from font.css for display the Rubik font*/
-@import url(font.css);
+/*Importing font-styles from font.css for display the # font*/
+@import 'modules/font';
 
 /*------------------ Default code --------------------*/
 
@@ -64,77 +64,76 @@ body {
     font-style: normal;
     font-weight: normal;
     direction: rtl;
+
+    .container {
+        max-width: 1125px;
+        width: 100%;
+        padding: 0 25px;
+        margin: 0 auto;
+    }
+
+    section {
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .site-main {
+        /*background-image: url("");*/
+        background-position: center;
+        background-repeat: repeat;
+        background-size: 100%;
+        max-width: 1920px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    img {
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1);
+        transition: transform 0.7s ease-in-out;
+    }
+
+    select, input, textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        direction: rtl !important;
+        outline: none;
+    }
+
+    select::-ms-expand { display: none; }
+
+    input[type="submit"] {
+        cursor: pointer;
+    }
+
+    .wpcf7-spinner,
+    .wpcf7 form .wpcf7-response-output,
+    .wpcf7-not-valid-tip,
+    .wpcf7 form.invalid .wpcf7-response-output,
+    .wpcf7 form.unaccepted .wpcf7-response-output,
+    .wpcf7 form.payment-required .wpcf7-response-output {
+        display: none !important;
+    }
+
+    /*Removing all mob blocks*/
+    .mob {
+        display: none !important;
+    }
+
+    .fancybox-container {
+        z-index: 9999999 !important;
+    }
 }
 
 body.stop {
     overflow: hidden;
-}
-
-.container {
-    max-width: 1125px;
-    width: 100%;
-    padding: 0 25px;
-    margin: 0 auto;
-}
-
-section {
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.site-main {
-    /*background-image: url("");*/
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 100%;
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-img {
-    height: 100%;
-    max-width: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1);
-    transition: transform 0.7s ease-in-out;
-}
-
-select, input, textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    direction: rtl !important;
-    outline: none;
-}
-
-select::-ms-expand { display: none; }
-
-input[type="submit"] {
-    cursor: pointer;
-}
-
-/*Removing all mob blocks*/
-
-.mob {
-    display: none !important;
-}
-
-.fancybox-container {
-    z-index: 9999999 !important;
-}
-
-.wpcf7-spinner,
-.wpcf7 form .wpcf7-response-output,
-.wpcf7-not-valid-tip,
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output,
-.wpcf7 form.payment-required .wpcf7-response-output {
-    display: none !important;
 }
 
 /*----------------- End Default code -----------------*/

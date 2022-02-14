@@ -30,7 +30,7 @@ import { js } from "./gulp/tasks/app.js";
 
 function wathcer() {
     gulp.watch(
-        path.watch.files, copy
+        path.watch.files
     );
     gulp.watch(
         path.watch.scss, scss
@@ -41,7 +41,7 @@ function wathcer() {
 }
 
 // Main tasks to do
-const mainTasks = gulp.parallel(copy, scss, js)
+const mainTasks = gulp.parallel(scss, js)
 
 // Executing the Default Script
 const dev = gulp.series(reset, mainTasks, gulp.parallel(wathcer));
