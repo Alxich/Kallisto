@@ -1,2 +1,2 @@
 # Kallisto
-The wordpress theme with gulp
+The wordpress theme without gulp

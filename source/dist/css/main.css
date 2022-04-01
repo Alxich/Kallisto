@@ -1,0 +1,271 @@
+/*!
+Theme Name: Kallisto
+Theme URI: https://concept1.co.il/
+Author: Roman Dydnuk
+Author URI: http://dudnyk.rb@gmail.com
+Description: This is wordpress theme made by Concept1. The url: <a target=\"_blank\" href=\"https://concept1.co.il/\">Concept1</a>
+Version: 1.0.0
+*/
+
+/*!
+*
+* Description: This is the main style that is used in all languages. The /--- (Example text) ---/ allow you to navigate
+*              in file. Comments tells about the code where it used
+*
+*/
+
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 800;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+}
+
+/*Start using # italic*/
+
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Italic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: normal;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-LightItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 300;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-MediumItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 500;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-SemiBoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 600;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-BoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 700;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-ExtraBoldItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 800;
+    font-display: auto;
+}
+@font-face {
+    font-family: "#";
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-BlackItalic.ttf") format("truetype");
+    font-style: italic;
+    font-weight: 900;
+    font-display: auto;
+}
+
+/*------------------ Default code --------------------*/
+
+/*special color and sizes*/
+
+:root {
+
+    /*The colors (cr - to find by search)*/
+
+    /*The background (bg - to find by search)*/
+
+    /*The text sizes (sz - to find by search)*/
+
+    /*Post sizes*/
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*rest of all not standard style for texts*/
+
+::placeholder, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+menu, nav, output, ruby, section, summary,
+time, mark {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-rendering: optimizeLegibility;
+    text-decoration: inherit;
+    color: inherit;
+}
+body {
+    font-family: '#', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    direction: rtl;
+    /*Removing all mob blocks*/
+}
+body .container {
+    max-width: 1125px;
+    width: 100%;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+body section {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+body .site-main {
+    /*background-image: url("");
+    */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+body img {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1);
+    transition: transform 0.7s ease-in-out;
+}
+body select, body input, body textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    direction: rtl !important;
+    outline: none;
+}
+body select::-ms-expand {
+    display: none;
+}
+body input[type="submit"] {
+    cursor: pointer;
+}
+body .wpcf7-spinner, body .wpcf7 form .wpcf7-response-output, body .wpcf7-not-valid-tip, body .wpcf7 form.invalid .wpcf7-response-output, body .wpcf7 form.unaccepted .wpcf7-response-output, body .wpcf7 form.payment-required .wpcf7-response-output {
+    display: none !important;
+}
+body .mob {
+    display: none !important;
+}
+body .fancybox-container {
+    z-index: 9999999 !important;
+}
+body.stop {
+    overflow: hidden;
+}
+
+/*----------------- End Default code -----------------*/
+/*----------------------------------------------------*/
+/*------------------- Header code --------------------*/
+
+/*The main bar of header*/
+
+header {
+
+}
+
+/*.admin-bar header {*/
+/*    top: 32px;*/
+/*}*/
+
+
+/*----------------- End Header code ------------------*/
+/*----------------------------------------------------*/
+/*------------------ Homepage code -------------------*/
+
+/*----------------- End Homepage code ----------------*/
+/*----------------------------------------------------*/
+/*------------------- Footer code --------------------*/
+
+footer {
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*----------------- End Footer code ------------------*/
+/*----------------------------------------------------*/
+/*--------------- Fixed elements code ----------------*/
+
+/*Captcha*/
+
+.grecaptcha-badge {
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+/*whatsapp*/
+
+/*colphone*/
+
+/*------------- End Fixed elements code --------------*/
+/*----------------------------------------------------*/

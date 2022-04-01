@@ -47,13 +47,11 @@ add_action('wp_print_styles', 'load_fancybox_styles_plugin');
  */
 function kallisto_scripts() {
     wp_enqueue_style( 'kallisto-normalize', get_template_directory_uri().'/source/assets/normalize/normalize.css' );
-    wp_enqueue_style( 'kallisto-main-style', get_template_directory_uri().'/source/css/main.css' );
+    wp_enqueue_style( 'kallisto-main-style', get_template_directory_uri().'/source/dist/css/main.css' );
     wp_enqueue_style( 'kallisto-style', get_stylesheet_uri(), array(), _Kallisto_VERSION );
     wp_style_add_data( 'kallisto-style', 'rtl', 'replace' );
-    wp_enqueue_style( 'kallisto-media-style', get_template_directory_uri().'/source/css/media.css' );
-//    wp_enqueue_style( 'kallisto-roman-style', get_template_directory_uri().'/source/css/roman.css' );
 
-    wp_enqueue_script( 'kallisto-scripts', get_template_directory_uri() . '/source/js/scripts.js', array(), _Kallisto_VERSION, true );
+    wp_enqueue_script( 'kallisto-scripts', get_template_directory_uri() . '/source/dist/js/app.js', array(), _Kallisto_VERSION, true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );

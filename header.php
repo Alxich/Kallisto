@@ -20,4 +20,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+<div id="page" class="site">
+
+    <header id="masthead" class="site-header">
+    </header><!-- #masthead -->
