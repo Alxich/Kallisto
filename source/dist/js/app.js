@@ -1,5 +1,5 @@
 /*!
-Theme Name: lp
+Theme Name: kallisto
 Theme URI: https://concept1.co.il/
 Author: Roman Dudnyk
 Author URI: http://dudnyk.rb@gmail.com
@@ -14,7 +14,7 @@ Version: 1.0.0
 function rtlIndicator() {
     let rtlIndicator = false; //False by default
 
-    if (document.documentElement.lang === "en-GB") {
+    if (document.documentElement.lang === "en-US") {
         rtlIndicator = false;
         document.body.classList.add("en");
     }else if (document.documentElement.lang === "ru-RU") {
@@ -24,17 +24,16 @@ function rtlIndicator() {
         rtlIndicator = true;
         document.body.classList.add("he");
     }
-    console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+    console.log(`The RTL indicator tells that the mode is: %c${rtlIndicator}`, 'background: #363636; color: #67da55; font-weight: 700; text-transform: uppercase; letter-spacing: 1px');
 }
 
-rtlIndicator();
-
 jQuery( document ).ready(function ($) {
+
+    rtlIndicator();
 
     //Tabing the questions in product page
 
     function tabQuestions({tabChanger, tabContent}) {
-
         $(tabChanger).each(function (index) {
             if(index === 0) {
                 $(this).addClass('active')
@@ -54,7 +53,6 @@ jQuery( document ).ready(function ($) {
     //Function that removes jumping page on "overflow:hidden"
 
     function removeScrollJump() {
-
         if(window.screen.width >= 1000) {
             if($('body').hasClass('stop')) {
                 $('body').css('margin-right', '17px');
@@ -62,7 +60,6 @@ jQuery( document ).ready(function ($) {
                 $('body').css('margin-right', '0');
             }
         }
-
     }
 
     function scrollto() {

@@ -1,6 +1,6 @@
 <?php
 /**
- *  Our version release of the wordpress theme Kallisto
+ *  Our version release of the wordpress theme kallisto
  */
 
 if ( ! defined( '_Kallisto_VERSION' ) ) {

@@ -9,6 +9,12 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: https://concept1.co.il/
-Text Domain: lp
+Text Domain: kallisto
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
+
+/*Moving all direction (text, positions) via language type*/
+
+body select, body input, body textarea {
+    direction: ltr;
+}
