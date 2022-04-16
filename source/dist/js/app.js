@@ -62,6 +62,8 @@ jQuery( document ).ready(function ($) {
         }
     }
 
+    //Function to add scroll to anchor
+
     function scrollto() {
         $(document).on('click', 'a[href^="#"]', function (event) {
             event.preventDefault();

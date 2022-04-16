@@ -23,6 +23,6 @@ require_once( __DIR__ . '/core/components/_root-files-loading.php');
 require_once( __DIR__ . '/core/components/_theme-files.php');
 
 /**
- *  Load other necessary function for plugins, wordpress, etc.
+ *  Load other necessary function for plugins, WordPress, etc.
  */
 require_once( __DIR__ . '/core/components/_themes-settings.php');

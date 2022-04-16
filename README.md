@@ -6,8 +6,6 @@ Simple custom WordPress theme with plugins and functional scripts init that have
 
 ###The plugins
 
-    # Gutenberg
-    # Woocommerce (additional)
     # ACF (advanced custom fields)
 
 ###Built with
@@ -15,6 +13,7 @@ Simple custom WordPress theme with plugins and functional scripts init that have
 * [Fancybox](https://fancyapps.com/)
 * [Normalize](https://necolas.github.io/normalize.css/)
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
+* [Font Awesome](https://fontawesome.com/)
 <br>
 
 ###License

@@ -17,9 +17,10 @@ Version: 1.0.0
 
 @import "fonts.css";
 
-/*-------------- END import fonts.css ----------------*/
+/*-------------- End import fonts.css ----------------*/
 /*----------------------------------------------------*/
-/*------------------ Default code --------------------*/
+/*------------------- Default code -------------------*/
+
 
 /*special color and sizes*/
 
@@ -53,6 +54,8 @@ time, mark {
     margin: 0;
     padding: 0;
     border: 0;
+    outline: none;
+    appearance: none;
     font-size: inherit;
     font-style: inherit;
     font-weight: inherit;
@@ -60,16 +63,19 @@ time, mark {
     text-decoration: inherit;
     color: inherit;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: '#', sans-serif;
     font-style: normal;
     font-weight: normal;
 }
 body .container {
-    max-width: 1125px;
+    max-width: 1320px;
     width: 100%;
-    padding: 0 25px;
     margin: 0 auto;
+    overflow: hidden;
 }
 body section {
     max-width: 1920px;
@@ -86,6 +92,7 @@ body .site-main {
     margin: 0 auto;
 }
 body img {
+    display: block;
     height: 100%;
     max-width: 100%;
     width: 100%;
@@ -100,6 +107,14 @@ body select, body input, body textarea {
     -ms-appearance: none;
     appearance: none;
     outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Chrome and other browsers*/
+}
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
 body select::-ms-expand {
     display: none;
@@ -124,34 +139,22 @@ body .fancybox-container {
 body.stop {
     overflow: hidden;
 }
+body .woocommerce {
+    width: 100%;
+}
+body #primary {
+    position: relative;
+    padding: 0 25px;
+    z-index: 1;
+}
 
-/*----------------- End Default code -----------------*/
+/*------------------ End default code ----------------*/
 /*----------------------------------------------------*/
 /*------------------- Header code --------------------*/
 
-/*The main bar of header*/
-
-header {
-    position: relative;
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-/*.admin-bar header {*/
-/*    top: 32px;*/
-/*}*/
-
-/*----------------- End Header code ------------------*/
+/*----------------- End header code ------------------*/
 /*----------------------------------------------------*/
 /*------------------- Footer code --------------------*/
-
-footer {
-    position: relative;
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
 
 /*----------------- End Footer code ------------------*/
 /*----------------------------------------------------*/
@@ -170,4 +173,8 @@ footer {
 /*colphone*/
 
 /*------------- End Fixed elements code --------------*/
+/*----------------------------------------------------*/
+/*-------------- Animate elements code ---------------*/
+
+/*------------ End Animate elements code -------------*/
 /*----------------------------------------------------*/

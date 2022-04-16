@@ -15,6 +15,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 /*Moving all direction (text, positions) via language type*/
 
-body select, body input, body textarea {
+body, body select, body input, body textarea {
     direction: rtl;
 }

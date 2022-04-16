@@ -1,11 +1,36 @@
-<?php get_header();
+<?php
+/**
+ * This template used for posts there is main functions for yours posts.
+ * It's redirects from root/core/template-parts/single-post.php
+ * There is no needed to show header and footer functions (already loaded).
+ */
+?>
 
-$not_fount_text = 'רשומות לא נמצאו';
-$category_title = 'קטגוריה';
-$tag_title = 'תָג';
-$archive_for_title = 'ארכיון';
-$archive_title = 'ארכיון';
+<section id="post">
+    <div class="container">
+        <div class="content">
+            <?php the_content(); ?>
+        </div>
+    </div>
+</section>
+<?php
 
+// Get excerpt by id with count of words
+//function get_excerpt_by_id($post_id){
+//    $the_post = get_post($post_id); //Gets post ID
+//    $the_excerpt = ($the_post ? $the_post->post_content : null); // Gets post_content to be used as a basis for the excerpt
+//    $excerpt_length = 7; // Sets excerpt length by word count
+//    $the_excerpt = strip_tags(strip_shortcodes($the_excerpt)); // Strips tags and images
+//    $words = explode(' ', $the_excerpt, $excerpt_length + 1);
+//
+//    if(count($words) > $excerpt_length) :
+//        array_pop($words);
+//        array_push($words, '…');
+//        $the_excerpt = implode(' ', $words);
+//    endif;
+//
+//    return $the_excerpt;
+//}
 
 function get_excerpt_by_id($post_id){
     $the_post = get_post($post_id);
@@ -13,36 +38,31 @@ function get_excerpt_by_id($post_id){
     return $the_excerpt;
 }
 
-?>
-<section id="posts">
-    <div class="title-line">
-        <h1>
-            <?php if( is_author() ):
-                echo $author_name;
-            elseif( is_category() ):
-                single_cat_title();
-            elseif( is_tag() ):
-                single_tag_title();
-            elseif( is_year() ):
-                the_time('Y');
-            elseif( is_month() ):
-                the_time('F Y');
-            else:
-                echo ''. $archive_title .'';
-            endif; ?>
-        </h1>
-    </div>
-    <div class="container">
-        <?php if ( have_posts() ):
-            while ( have_posts() ) : the_post();
-                $current_post = get_the_ID(); // Get current post ID
-                $current_cat = get_the_category($current_post); // From post ID get category
-                foreach($current_cat as $cd){
-                    $current_cat_name = $cd->cat_name;
-                }
+$current_post = $post->ID; // Get current post ID
+$current_cat = get_the_category($current_post); // From post ID get category
+foreach($current_cat as $cd){
+    $current_cat_name = $cd->cat_name;
+}
 
+$args = array(
+    'post_type'      => 'post',
+    'post_status'    => 'publish',
+    'post__not_in'   => array($current_post), // Exclude current post in loop
+    'category_name'  => $current_cat_name,
+    'orderby'        => 'date', // Order by final edit date
+    'posts_per_page' => 4, // last 4 hide by css
+    'hide_empty'     => false,
+);
+$post_more = new WP_Query( $args );
+if ( $post_more->have_posts() ) { ?>
+    <section id="posts">
+        <div class="main-title">
+            <h3>עוד מאמרים</h3>
+        </div>
+        <div class="container">
+            <?php while ( $post_more->have_posts() ) : $post_more->the_post();
                 /*Get values for post*/
-                $post_id = get_the_ID();
+                $post_id = $post_more->ID;
                 $category = get_the_category($post_id);
                 $category_link = get_category_link($category[0] -> term_id);
                 $category_name = $category[0]->name;
@@ -53,7 +73,7 @@ function get_excerpt_by_id($post_id){
                 $post_text = get_excerpt_by_id($post_id);
                 $title_btn = 'יש עוד';
                 $post_title = get_the_title();
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_more->post->ID ), 'single-post-thumbnail' );
 
                 echo '<div class="post">';
                     echo '<a class="thumbnail" href="'. get_permalink() .'" target="_self">';
@@ -82,20 +102,8 @@ function get_excerpt_by_id($post_id){
                         echo '<a class="more-info" href="'. get_permalink() .'" target="_self">'. $title_btn .'</a>';
                     echo '</div>';
                 echo '</div>';
-            endwhile; wp_reset_query();
-        else:
-          echo '<h2>'. $not_fount_text .'</h2>';
-        endif; ?>
-    </div>
-</section>
-
-<?php if ( $wp_query->max_num_pages > 1 ) : ?>
-  <div class="prev">
-    <?php next_posts_link( __( '&larr; Older posts' ) ); ?>
-  </div>
-  <div class="next">
-    <?php previous_posts_link( __( 'Newer posts &rarr;' ) ); ?>
-  </div>
-<?php endif; ?>
-
-<?php get_footer(); ?>
+            endwhile;
+            wp_reset_postdata();?>
+        </div>
+    </section>
+<?php }?>

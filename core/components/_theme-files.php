@@ -43,10 +43,18 @@ function load_fancybox_styles_plugin() {
 add_action('wp_print_styles', 'load_fancybox_styles_plugin');
 
 /**
+ * Load css styles for font-awesome
+ */
+function load_font_awesome_styles_plugin() {
+    wp_enqueue_style( 'kallisto-font-awesome-style', get_template_directory_uri().'/source/assets/font-awesome/css/font-awesome.min.css' );
+}
+add_action('wp_print_styles', 'load_font_awesome_styles_plugin');
+
+/**
  * Enqueue scripts and styles.
  */
 function kallisto_scripts() {
-    wp_enqueue_style( 'kallisto-normalize', get_template_directory_uri().'/source/assets/normalize/normalize.css' );
+    wp_enqueue_style( 'kallisto-normalize', get_template_directory_uri().'/source/assets/normalize/normalize.min.css' );
     wp_enqueue_style( 'kallisto-main-style', get_template_directory_uri().'/source/dist/css/main.css' );
     wp_enqueue_style( 'kallisto-style', get_stylesheet_uri(), array(), _Kallisto_VERSION );
     wp_style_add_data( 'kallisto-style', 'rtl', 'replace' );
