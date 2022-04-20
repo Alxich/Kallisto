@@ -1,0 +1,19 @@
+/**
+ *  All necessary media requires for media view style.
+ *  Do not forget to initial that in _theme-files.php (theme directory/core/components/...).
+ *  Do not repeat media require !
+ */
+
+/*------------- _ Desktop media styles _ -------------*/
+
+/*Code begins to 991px*/
+
+
+/*----------- _ End desktop media styles _ -----------*/
+/*----------------------------------------------------*/
+/*------------- _ Mobile media styles _ --------------*/
+
+/*Code begins form 991px to 0px*/
+
+/*----------- _ End mobile media styles _ ------------*/
+/*----------------------------------------------------*/
