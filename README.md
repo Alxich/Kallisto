@@ -1,4 +1,4 @@
-## Kallisto (Concept1 Gulp theme )
+## Kallisto (Concept1 theme )
 
 Simple custom WordPress theme with plugins and functional scripts init that have been made by Concept1. Used for websites like shops, blogs, landing pages etc.
 
