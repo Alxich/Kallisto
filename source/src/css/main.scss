@@ -3,7 +3,6 @@ Theme Name: Kallisto
 Theme URI: https://concept1.co.il/
 Author: Roman Dydnuk
 Author URI: http://dudnyk.rb@gmail.com
-Description: This is wordpress theme made by Concept1. The url: <a target=\"_blank\" href=\"https://concept1.co.il/\">Concept1</a>
 Version: 1.0.0
 */
 
@@ -38,6 +37,10 @@ Version: 1.0.0
 }
 
 /*rest of all not standard style for texts*/
+
+html {
+    scroll-behavior: smooth;
+}
 
 ::placeholder, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -107,10 +110,22 @@ body {
         outline: none;
     }
 
-    select::-ms-expand { display: none; }
+    select::-ms-expand {
+        display: none; 
+    }
 
     input[type="submit"] {
         cursor: pointer;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0; /* Chrome and other browsers*/
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield; /* Firefox */
     }
 
     .wpcf7-spinner,
@@ -127,13 +142,24 @@ body {
         display: none !important;
     }
 
+    .stop {
+        overflow: hidden;
+    }
+
     .fancybox-container {
         z-index: 9999999 !important;
     }
-}
 
-body.stop {
-    overflow: hidden;
+    .woocommerce {
+        width: 100%;
+    }
+
+    #primary {
+        position: relative;
+        padding: 0 25px;
+        z-index: 1;
+    }
+
 }
 
 /*----------------- End Default code -----------------*/
@@ -142,9 +168,7 @@ body.stop {
 
 /*The main bar of header*/
 
-header {
-
-}
+header {}
 
 /*.admin-bar header {*/
 /*    top: 32px;*/
@@ -159,12 +183,7 @@ header {
 /*----------------------------------------------------*/
 /*------------------- Footer code --------------------*/
 
-footer {
-    position: relative;
-    max-width: 1920px;
-    width: 100%;
-    margin: 0 auto;
-}
+footer {}
 
 /*----------------- End Footer code ------------------*/
 /*----------------------------------------------------*/
@@ -183,4 +202,40 @@ footer {
 /*colphone*/
 
 /*------------- End Fixed elements code --------------*/
+/*----------------------------------------------------*/
+/*-------------- Animate elements code ---------------*/
+
+/* animation rotate-vert-center */
+@-webkit-keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+@keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+/* animation typing effect */
+@keyframes type{
+    from{
+        box-shadow: inset 3px 0 0 #000000;
+    }
+    to{
+        box-shadow: inset 3px 0 0 transparent;
+    }
+}
+
+/*------------ End Animate elements code -------------*/
 /*----------------------------------------------------*/

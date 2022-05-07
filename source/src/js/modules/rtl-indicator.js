@@ -5,14 +5,14 @@ export function rtlIndicator() {
     let rtlIndicator = false; //False by default
 
     if (document.documentElement.lang === "en-GB") {
-        rtlIndicator = false;
         document.body.classList.add("en");
+        return rtlIndicator = false;
     }else if (document.documentElement.lang === "ru-RU") {
-        rtlIndicator = false;
         document.body.classList.add("ru");
+        return rtlIndicator = false;
     }else if (document.documentElement.lang === "he-IL") {
-        rtlIndicator = true;
         document.body.classList.add("he");
+        return rtlIndicator = true;
     }
     console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
 }
