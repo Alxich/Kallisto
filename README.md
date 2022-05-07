@@ -4,13 +4,13 @@ Simple custom WordPress theme with plugins and functional scripts init that have
 
 -----------------------------------------------------------------------------
 
-###The plugins
+#The plugins
 
     # Gutenberg
     # Woocommerce (additional)
     # ACF (advanced custom fields)
 
-###Built with
+#Built with
 * [Gulp](https://gulpjs.com/)
 * [jQuery](https://jquery.com/)
 * [Fancybox](https://fancyapps.com/)
@@ -20,7 +20,7 @@ Simple custom WordPress theme with plugins and functional scripts init that have
 * [Font Awesome](https://fontawesome.com/)
 <br>
 
-###License
+#License
 
 -----------------------------------------------------------------------------
 
