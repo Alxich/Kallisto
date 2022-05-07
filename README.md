@@ -8,7 +8,7 @@ The plugins
 
     # ACF (advanced custom fields)
 
-###Built with
+Built with
 * [jQuery](https://jquery.com/)
 * [Fancybox](https://fancyapps.com/)
 * [Normalize](https://necolas.github.io/normalize.css/)
