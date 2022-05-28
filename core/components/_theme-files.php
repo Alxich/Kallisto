@@ -71,7 +71,6 @@ function kallisto_scripts() {
     wp_enqueue_style( 'kallisto-main-style', get_template_directory_uri().'/source/dist/main.min.css');
     wp_enqueue_style( 'kallisto-style', get_stylesheet_uri(), array(), _Kallisto_VERSION );
     wp_style_add_data( 'kallisto-style', 'rtl', 'replace' );
-    wp_enqueue_style( 'kallisto-media-style', get_template_directory_uri().'/source/dist/css/media.css' );
 
     wp_enqueue_script( 'kallisto-scripts', get_template_directory_uri() . '/source/dist/js/app.js', array(), _Kallisto_VERSION, true );
 
