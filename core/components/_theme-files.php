@@ -9,7 +9,7 @@
  */
 function including_custom_jquery() {
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', get_template_directory_uri().'/source/assets/jquery/jquery.min.js', array(), null, true);
+    wp_enqueue_script('jquery', get_template_directory_uri().'/source/assets/jquery/jquery.min.js', array(), null, false);
 }
 add_action('wp_enqueue_scripts', 'including_custom_jquery');
 
@@ -17,15 +17,15 @@ add_action('wp_enqueue_scripts', 'including_custom_jquery');
  * Load scripts and css for owl carousel 2.3.4
  */
 function load_owl_carousel() {
-    wp_enqueue_script('owl_carousel_min_js', get_stylesheet_directory_uri() . '/source/assets/owl-carousel/scripts/owl.carousel.min.js', array(), _Kallisto_VERSION, true);
+    wp_enqueue_script('owl_carousel_min_js', get_stylesheet_directory_uri() . '/source/assets/owl-carousel/scripts/owl.carousel.min.js');
 }
 add_action('wp_enqueue_scripts', 'load_owl_carousel');
 
 add_action('wp_print_styles', 'add_styles');
 if (!function_exists('add_styles')) {
     function add_styles() {
-        wp_enqueue_style( 'owl', get_template_directory_uri().'/source/assets/owl-carousel/styles/owl.carousel.min.css', array(), _Kallisto_VERSION, true );
-        wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/source/assets/owl-carousel/styles/owl.theme.default.min.css', array(), _Kallisto_VERSION, true );
+        wp_enqueue_style( 'owl', get_template_directory_uri().'/source/assets/owl-carousel/styles/owl.carousel.min.css');
+        wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/source/assets/owl-carousel/styles/owl.theme.default.min.css');
     }
 }
 
@@ -33,12 +33,12 @@ if (!function_exists('add_styles')) {
  * Load scripts and css for fancybox
  */
 function load_fancybox_script_plugin() {
-    wp_enqueue_script( 'kallisto-fancybox-script', get_template_directory_uri() . '/source/assets/fancybox/jquery.fancybox.min.js', array(), _Kallisto_VERSION, true );
+    wp_enqueue_script( 'kallisto-fancybox-script', get_template_directory_uri() . '/source/assets/fancybox/jquery.fancybox.min.js');
 }
 add_action('wp_enqueue_scripts', 'load_fancybox_script_plugin');
 
 function load_fancybox_styles_plugin() {
-    wp_enqueue_style( 'kallisto-fancybox-style', get_template_directory_uri().'/source/assets/fancybox/jquery.fancybox.min.css', array(), _Kallisto_VERSION, true );
+    wp_enqueue_style( 'kallisto-fancybox-style', get_template_directory_uri().'/source/assets/fancybox/jquery.fancybox.min.css');
 }
 add_action('wp_print_styles', 'load_fancybox_styles_plugin');
 
@@ -46,7 +46,7 @@ add_action('wp_print_styles', 'load_fancybox_styles_plugin');
  * Load css styles for font-awesome
  */
 function load_font_awesome_styles_plugin() {
-    wp_enqueue_style( 'kallisto-font-awesome-style', get_template_directory_uri().'/source/assets/font-awesome/css/font-awesome.min.css', array(), _Kallisto_VERSION, true );
+    wp_enqueue_style( 'kallisto-font-awesome-style', get_template_directory_uri().'/source/assets/font-awesome/css/font-awesome.min.css');
 }
 add_action('wp_print_styles', 'load_font_awesome_styles_plugin');
 
@@ -54,12 +54,12 @@ add_action('wp_print_styles', 'load_font_awesome_styles_plugin');
  * Load scripts and css for aos
  */
 function load_aos_script_plugin() {
-    wp_enqueue_script( 'kallisto-aos-script', get_template_directory_uri() . '/source/assets/aos-animation/aos.js', array(), _Kallisto_VERSION, true );
+    wp_enqueue_script( 'kallisto-aos-script', get_template_directory_uri() . '/source/assets/aos-animation/aos.js');
 }
 add_action('wp_enqueue_scripts', 'load_aos_script_plugin');
 
 function load_aos_styles_plugin() {
-    wp_enqueue_style( 'kallisto-aos-style', get_template_directory_uri().'/source/assets/aos-animation/aos.css', array(), _Kallisto_VERSION, true );
+    wp_enqueue_style( 'kallisto-aos-style', get_template_directory_uri().'/source/assets/aos-animation/aos.css');
 }
 add_action('wp_print_styles', 'load_aos_styles_plugin');
 

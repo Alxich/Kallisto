@@ -28,9 +28,14 @@ require_once( __DIR__ . '/core/components/_theme-files.php');
 require_once( __DIR__ . '/core/components/_themes-settings.php');
 
 /**
- *  Load other necessary function for Woocommerce plugin. (If woocommerce used).
+ *  Load other necessary function for Woocommerce plugin.
  */
-// require_once( __DIR__ . '/core/components/_wc-functions.php');
+//require_once( __DIR__ . '/core/components/_wc-functions.php');
+
+/**
+ *  Load other necessary function for Woocommerce wishlist plugin.
+ */
+//require_once( __DIR__ . '/core/components/_wc-wishlist.php');
 
 /**
  *  Load other necessary function for WP shortcodes.

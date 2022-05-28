@@ -70,4 +70,18 @@ function custom_add_to_cart_message_html( $message, $products ) {
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
+
+/**
+ *  Update woocommerce cart count after ajax load
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
+function iconic_cart_count_fragments( $fragments ) {
+    $fragments['div.count-cart'] = '
+        <div class="count-cart">'.
+        WC()->cart->get_cart_contents_count()
+        .'</div>';
+
+    return $fragments;
+}
+
 ?>
