@@ -21,7 +21,6 @@ Version: 1.0.0
 /*special color and sizes*/
 
 :root {
-
     /*The colors (cr - to find by search)*/
 
     /*The background (bg - to find by search)*/
@@ -29,7 +28,6 @@ Version: 1.0.0
     /*The text sizes (sz - to find by search)*/
 
     /*Post sizes*/
-
 }
 
 * {
@@ -106,7 +104,6 @@ body {
         -moz-appearance: none;
         -ms-appearance: none;
         appearance: none;
-        direction: rtl !important;
         outline: none;
     }
 
@@ -159,7 +156,6 @@ body {
         padding: 0 25px;
         z-index: 1;
     }
-
 }
 
 /*----------------- End Default code -----------------*/

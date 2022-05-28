@@ -6,13 +6,18 @@ export function rtlIndicator() {
 
     if (document.documentElement.lang === "en-GB") {
         document.body.classList.add("en");
-        return rtlIndicator = false;
+        rtlIndicator = false;
+        console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+        return rtlIndicator;
     }else if (document.documentElement.lang === "ru-RU") {
         document.body.classList.add("ru");
-        return rtlIndicator = false;
+        rtlIndicator = false;
+        console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+        return rtlIndicator;
     }else if (document.documentElement.lang === "he-IL") {
         document.body.classList.add("he");
-        return rtlIndicator = true;
+        rtlIndicator = true;
+        console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+        return rtlIndicator;
     }
-    console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
 }

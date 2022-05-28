@@ -12,3 +12,9 @@ License URI: https://concept1.co.il/
 Text Domain: lp
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
+
+/*Moving all direction (text, positions) via language type*/
+
+body, body select, body input, body textarea {
+    direction: ltr;
+}
