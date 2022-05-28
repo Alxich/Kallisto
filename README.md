@@ -1,6 +1,6 @@
-## Kallisto (Concept1 theme)
+## Kallisto (Gulp Edition)
 
-Simple custom WordPress theme with plugins and functional script's init that have been made by Concept1.
+Simple custom WordPress theme with plugins and functional script's init.
 Used for websites like shops, blogs, landing pages etc.
 Theme customize the appearance of your site, including the layout, typography, color, and other design elements.
 Changing theme won’t necessarily change your blog content, pages, users, or other information stored in your database.
@@ -60,5 +60,3 @@ _GNU General Public License v2 or later_
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-green.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
 
 -----------------------------------------------------------------------------
-
-####Additional information about this theme: **[Concept1.co.il](https://concept1.co.il/)**

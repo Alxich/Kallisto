@@ -1,7 +1,7 @@
 {
   "name": "kallisto",
   "version": "1.0.1",
-  "description": "This is wordpress theme made by Concept1.The theme name is kallisto which used to make good site and products",
+  "description": "This is wordpress theme made by Roman Dudnyk.The theme name is kallisto which used to make good site and products",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -9,9 +9,9 @@
     "build": "gulp build --build"
   },
   "keywords": [
-    "Concept1"
+    "Worpdress"
   ],
-  "author": "Roman Dydnuk",
+  "author": "Roman Dudnyk",
   "license": "ISC",
   "devDependencies": {
     "del": "6.0.0",

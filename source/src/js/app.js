@@ -1,6 +1,5 @@
 /*!
-Theme Name: lp
-Theme URI: https://concept1.co.il/
+Theme Name: Kallisto
 Author: Roman Dudnyk
 Author URI: http://dudnyk.rb@gmail.com
 Version: 1.0.0
