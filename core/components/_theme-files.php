@@ -67,13 +67,8 @@ add_action('wp_print_styles', 'load_aos_styles_plugin');
  * Enqueue scripts and styles.
  */
 function kallisto_scripts() {
-<<<<<<< HEAD
     wp_enqueue_style( 'kallisto-normalize', get_template_directory_uri().'/source/assets/normalize/normalize.min.css');
     wp_enqueue_style( 'kallisto-main-style', get_template_directory_uri().'/source/dist/main.min.css');
-=======
-    wp_enqueue_style( 'kallisto-normalize', get_template_directory_uri().'/source/assets/normalize/normalize.min.css' );
-    wp_enqueue_style( 'kallisto-main-style', get_template_directory_uri().'/source/dist/css/main.css' );
->>>>>>> d87261c4737c23ac907c0210ffd1b3f03da290aa
     wp_enqueue_style( 'kallisto-style', get_stylesheet_uri(), array(), _Kallisto_VERSION );
     wp_style_add_data( 'kallisto-style', 'rtl', 'replace' );
     wp_enqueue_style( 'kallisto-media-style', get_template_directory_uri().'/source/dist/css/media.css' );
