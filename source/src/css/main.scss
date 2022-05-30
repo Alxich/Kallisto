@@ -12,6 +12,9 @@ Version: 1.0.0
 *
 */
 
+/*Import normalizer reset file from npm package*/
+@import "node_modules/normalize-scss/sass/normalize";
+
 /*Importing font-styles from font.css for display the # font*/
 @import 'modules/font';
 

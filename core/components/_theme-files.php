@@ -72,7 +72,7 @@ function kallisto_scripts() {
     wp_enqueue_style( 'kallisto-style', get_stylesheet_uri(), array(), _Kallisto_VERSION );
     wp_style_add_data( 'kallisto-style', 'rtl', 'replace' );
 
-    wp_enqueue_script( 'kallisto-scripts', get_template_directory_uri() . '/source/dist/js/app.js', array(), _Kallisto_VERSION, true );
+    wp_enqueue_script( 'kallisto-scripts', get_template_directory_uri() . '/source/dist/app.min.js', array(), _Kallisto_VERSION, true );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
