@@ -8,26 +8,30 @@ export function rtlIndicator() {
     if (document.documentElement.lang === "en-GB") {
 
         document.body.classList.add("en");
-        rtlIndicator = false;
-        console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+        console.log(`The RTL indicator tells that the mode is : false`);
 
-        return rtlIndicator;
+        return false;
+
+    } else if (document.documentElement.lang === "en-US") {
+
+        document.body.classList.add("en");
+        console.log(`The RTL indicator tells that the mode is : false`);
+
+        return false;
 
     } else if (document.documentElement.lang === "ru-RU") {
 
         document.body.classList.add("ru");
-        rtlIndicator = false;
-        console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+        console.log(`The RTL indicator tells that the mode is : false`);
 
-        return rtlIndicator;
+        return false;
 
     } else if (document.documentElement.lang === "he-IL") {
 
         document.body.classList.add("he");
-        rtlIndicator = true;
-        console.log(`The RTL indicator tells that the mode is : ${rtlIndicator}`);
+        console.log(`The RTL indicator tells that the mode is : true`);
 
-        return rtlIndicator;
+        return true;
 
     }
 
