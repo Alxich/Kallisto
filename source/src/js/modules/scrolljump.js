@@ -13,8 +13,8 @@ export function removeScrollJump() {
 
             $('body').css('margin-right', '0');
 
-
         }
+
     }
 
 }
