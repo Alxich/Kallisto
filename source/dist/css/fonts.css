@@ -6,53 +6,51 @@
 
 /* ----------------------- IMPORTING FONTS ----------------------- */
 
-/*Start using # Regular*/
-
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-Regular.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Regular.woff") format("woff");
     font-style: normal;
     font-weight: normal;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-Light.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Light.woff") format("woff");
     font-style: normal;
     font-weight: 300;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-Medium.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Medium.woff") format("woff");
     font-style: normal;
     font-weight: 500;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-SemiBold.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-SemiBold.woff") format("woff");
     font-style: normal;
     font-weight: 600;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-Bold.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Bold.woff") format("woff");
     font-style: normal;
     font-weight: 700;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-ExtraBold.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-ExtraBold.woff") format("woff");
     font-style: normal;
     font-weight: 800;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-Black.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Black.woff") format("woff");
     font-style: normal;
     font-weight: 900;
     font-display: auto;
@@ -62,49 +60,49 @@
 
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-Italic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Italic.woff") format("woff");
     font-style: italic;
     font-weight: normal;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-LightItalic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-LightItalic.woff") format("woff");
     font-style: italic;
     font-weight: 300;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-MediumItalic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-MediumItalic.woff") format("woff");
     font-style: italic;
     font-weight: 500;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-SemiBoldItalic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-SemiBoldItalic.woff") format("woff");
     font-style: italic;
     font-weight: 600;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-BoldItalic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-BoldItalic.woff") format("woff");
     font-style: italic;
     font-weight: 700;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-ExtraBoldItalic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-ExtraBoldItalic.woff") format("woff");
     font-style: italic;
     font-weight: 800;
     font-display: auto;
 }
 @font-face {
     font-family: "#";
-    src: url("/wp-content/themes/kallisto/source/assets/fonts/#/#-BlackItalic.woff") format("woff");
+    src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-BlackItalic.woff") format("woff");
     font-style: italic;
     font-weight: 900;
     font-display: auto;

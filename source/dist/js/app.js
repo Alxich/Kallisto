@@ -9,69 +9,105 @@ Version: 1.0.0
 
 'use strict'
 
-//if page is rtl, we make it true else false (For owl carousel attr + Adding class to body)
+// if page is rtl, we make it true else false (For owl carousel attr + Adding class to body)
 
 function rtlIndicator() {
-    let rtlIndicator = false; //False by default
 
     if (document.documentElement.lang === "en-US") {
-        rtlIndicator = false;
+
         document.body.classList.add("en");
-    }else if (document.documentElement.lang === "ru-RU") {
-        rtlIndicator = false;
+        return false;
+
+    } else if (document.documentElement.lang === "ru-RU") {
+
         document.body.classList.add("ru");
-    }else if (document.documentElement.lang === "he-IL") {
-        rtlIndicator = true;
+        return false;
+
+    } else if (document.documentElement.lang === "he-IL") {
+
         document.body.classList.add("he");
+        return true;
+
+    } else {
+
+        document.body.classList.add("unknown");
+        return false;
+
     }
-    console.log(`The RTL indicator tells that the mode is: %c${rtlIndicator}`, 'background: #363636; color: #67da55; font-weight: 700; text-transform: uppercase; letter-spacing: 1px');
+
 }
 
 jQuery( document ).ready(function ($) {
 
-    rtlIndicator();
+    console.log(`The RTL indicator tells that the mode is: %c${rtlIndicator()}`, 'background: #363636; color: #67da55; font-weight: 700; text-transform: uppercase; letter-spacing: 1px');
 
-    //Tabing the questions in product page
+    // Tabling the questions in product page
 
     function tabQuestions({tabChanger, tabContent}) {
+
         $(tabChanger).each(function (index) {
+
             if(index === 0) {
+
                 $(this).addClass('active')
                 $(`${tabContent}:nth-child(${index + 1})`).addClass('active');
+
             }
+
             $(this).on('click', function () {
+
                 if(!($(this).hasClass('active'))) {
+
                     $(tabChanger).removeClass('active');
                     $(tabContent).removeClass('active');
+
                     $(this).addClass('active');
                     $(`${tabContent}:nth-child(${index + 1})`).addClass('active');
+
                 }
+
             });
+
         });
+
+
     }
 
-    //Function that removes jumping page on "overflow:hidden"
+    // Function that removes jumping page on "overflow:hidden"
 
     function removeScrollJump() {
+
         if(window.screen.width >= 1000) {
+
             if($('body').hasClass('stop')) {
+
                 $('body').css('margin-right', '17px');
-            }else {
+
+            } else {
+
                 $('body').css('margin-right', '0');
             }
+
         }
+
     }
 
-    //Function to add scroll to anchor
+    // Function to add scroll to anchor
 
     function scrollto() {
+
         $(document).on('click', 'a[href^="#"]', function (event) {
+
             event.preventDefault();
 
             $('html, body').animate({
+
                 scrollTop: $($.attr(this, 'href')).offset().top
+
             }, 500);
+
         });
+
     }
 
 });

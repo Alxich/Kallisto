@@ -7,20 +7,14 @@
     <meta name="format-detection" content="date=no">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
-    <title>
-        <?php
-          if( ! is_home() ):
-            wp_title( '|', true, 'right' );
-          endif;
-          bloginfo( 'name' );
-        ?>
-    </title>
+    <title>Welcome to Kallisto</title>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
+
     <header id="masthead" class="site-header">
 
     </header><!-- #masthead -->

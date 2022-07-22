@@ -1,20 +1,18 @@
 /*!
 Theme Name: Kallisto
-Theme URI: https://concept1.co.il/
 Author: Roman Dudnyk
 Author URI: http://dudnyk.rb@gmail.com
-Description: This is wordpress theme made by Concept1. The url: <a href=\"https://concept1.co.il/\">concept1.co.il</a>
+Description: Simple custom WordPress theme with plugins and functional script's init. Used for websites like shops, blogs, landing pages etc. Theme customize the appearance of your site, including the layout, typography, color, and other design elements. Changing theme won’t necessarily change your blog content, pages, users, or other information stored in your database. Your theme only changes how all that information is displayed to your website visitors.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
-License URI: https://concept1.co.il/
-Text Domain: kallisto
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain: Kallisto
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 */
 
 /*Moving all direction (text, positions) via language type*/
 
 body, body select, body input, body textarea {
-    direction: ltr; /*before language plugin (when use return ltr)*/
+    direction: ltr;
 }

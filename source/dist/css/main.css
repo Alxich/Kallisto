@@ -63,25 +63,30 @@ time, mark {
     text-decoration: inherit;
     color: inherit;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: '#', sans-serif;
     font-style: normal;
     font-weight: normal;
 }
+
 body .container {
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
+
 body section {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
 }
+
 body .site-main {
     /*background-image: url("");*/
     background-position: center;
@@ -91,6 +96,7 @@ body .site-main {
     width: 100%;
     margin: 0 auto;
 }
+
 body img {
     display: block;
     height: 100%;
@@ -101,6 +107,7 @@ body img {
     transform: scale(1);
     transition: transform 0.7s ease-in-out;
 }
+
 body select, body input, body textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -108,20 +115,25 @@ body select, body input, body textarea {
     appearance: none;
     outline: none;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; /* Chrome and other browsers*/
 }
+
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
+
 body select::-ms-expand {
     display: none;
 }
+
 body input[type="submit"] {
     cursor: pointer;
 }
+
 body .wpcf7-spinner,
 body .wpcf7 form .wpcf7-response-output,
 body .wpcf7-not-valid-tip,
@@ -130,18 +142,23 @@ body .wpcf7 form.unaccepted .wpcf7-response-output,
 body .wpcf7 form.payment-required .wpcf7-response-output {
     display: none !important;
 }
+
 body .mob {
     display: none !important;
 }
+
 body .fancybox-container {
     z-index: 9999999 !important;
 }
+
 body.stop {
     overflow: hidden;
 }
+
 body .woocommerce {
     width: 100%;
 }
+
 body #primary {
     position: relative;
     padding: 0 25px;
