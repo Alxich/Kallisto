@@ -1,4 +1,4 @@
-# **Kallisto** *(Gulp edition)*
+# **Kallisto**
 
 **Contributors:** Roman Dydnuk <br>
 **Requires at least:** WordPress 5.0 <br>
