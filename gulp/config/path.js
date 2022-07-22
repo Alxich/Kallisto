@@ -1,5 +1,5 @@
 /**
- *  This is path configuration file where we get code, files, etc for using it in gulp to compile
+ *  This is path configuration file where we get code, files, etc. For using it in gulp to compile
  *  Use only path *
  */
 

@@ -47,7 +47,7 @@ const mainTasks = gulp.parallel(scss, js)
 const dev = gulp.series(reset, mainTasks, gulp.parallel(wathcer));
 const build = gulp.series(reset, mainTasks);
 
-// Exports taskes to do
+// Exports tasks to do
 export { dev }
 export { build }
 

@@ -7,14 +7,6 @@
     <meta name="format-detection" content="date=no">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
-    <title>
-        <?php
-          if( ! is_home() ):
-            wp_title( '|', true, 'right' );
-          endif;
-          bloginfo( 'name' );
-        ?>
-    </title>
     <?php wp_head(); ?>
 </head>
 

@@ -1,4 +1,4 @@
-//Tabing the questions in product page
+// Tabling the questions in product page
 
 export function tabQuestions({tabChanger, tabContent}) {
 

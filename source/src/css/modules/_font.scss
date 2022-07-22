@@ -1,4 +1,11 @@
-/*Start using fonts #*/
+/**
+ *  Register all necessary fonts for style.
+ *  Do not forget to initial that in main.css (theme directory/source/dist/css/).
+ *  Get`s all necessary fonts files from (theme directory/source/dist/assets/fonts/...)
+ */
+
+/* ----------------------- IMPORTING FONTS ----------------------- */
+
 @font-face {
     font-family: "#";
     src: url("/wp-content/themes/Kallisto/source/assets/fonts/#/#-Regular.woff") format("woff");
@@ -100,3 +107,5 @@
     font-weight: 900;
     font-display: auto;
 }
+
+/* ----------------------- END IMPORTING FONTS ----------------------- */

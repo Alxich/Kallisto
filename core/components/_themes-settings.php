@@ -10,8 +10,11 @@
 *  to output valid HTML5.
 */
 add_theme_support(
+
     'html5',
+
     array(
+
         'search-form',
         'comment-form',
         'comment-list',
@@ -19,48 +22,69 @@ add_theme_support(
         'caption',
         'style',
         'script',
+
     )
+
 );
 
 /**
  *  Register new menus for theme
  */
-function register_my_menus() {
+function register_my_menus()
+{
+    
     register_nav_menus(
+        
         array(
+
             'Primary Header' => __( 'Primary Header' ),
             'Primary Footer' => __( 'Primary Footer' )
+
         )
+        
     );
+    
 }
+
 add_action( 'init', 'register_my_menus' );
 
 /**
  *   Add option page for default values of page,footer,header,etc.
  */
-if( function_exists('acf_add_options_page') ) {
+if( function_exists( 'acf_add_options_page' ) ) 
+{
+    
     $args = array(
+
         'page_title' => 'Theme settings',
         'menu_title' => '',
         'menu_slug' => 'Options',
         'post_id' => 'options',
+
     );
+    
     acf_add_options_page( $args );
+    
 }
 
 /**
  *   Allow loading and read svg format of images
  */
-function cc_mime_types($mimes) {
+function cc_mime_types( $mimes )
+{
+    
     $mimes['svg'] = 'image/svg';
+    
     return $mimes;
+    
 }
-add_filter('upload_mimes', 'cc_mime_types');
+
+add_filter( 'upload_mimes', 'cc_mime_types' );
 
 /**
  *   Remove <p> and <br/> from Contact Form 7
  */
-add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 /**
  *   Add excerpts support to pages in WordPres admin panel

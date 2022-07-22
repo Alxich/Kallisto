@@ -2,8 +2,13 @@
 /*
 *  Template Name: Homepage
 */
+
+get_header();
+
 ?>
 
-<?php get_header(); ?>
+<?php
 
-<?php get_footer(); ?>
+get_footer();
+
+?>

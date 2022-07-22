@@ -4,7 +4,7 @@
 
 export const copy = () => {
 
-    //Get the files pre-code
+    // Get the files pre-code
     return app.gulp.src(
         app.path.src.files
     )

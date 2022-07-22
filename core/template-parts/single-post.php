@@ -1,4 +1,5 @@
 <?php
+
 //Get global values
 global $post;
 
