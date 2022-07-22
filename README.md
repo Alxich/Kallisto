@@ -39,7 +39,6 @@ Your theme only changes how all that information is displayed to your website vi
 -----------------------------------------------------------------------------
 <br>
 
-* [Gulp](https://gulpjs.com/)
 * [jQuery 3.6.0](https://jquery.com/)
 * [Fancybox V3](https://fancyapps.com/)
 * [AOS V2](https://michalsnik.github.io/aos/)
