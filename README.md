@@ -112,3 +112,4 @@ _GNU General Public License v2 or later_
     Version: 1.0.1 (23.07.2022)
 
      - Created welcome page with animation
+     - Added description in theme details
