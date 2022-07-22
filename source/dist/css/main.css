@@ -161,7 +161,6 @@ body .woocommerce {
 
 body #primary {
     position: relative;
-    padding: 0 25px;
     z-index: 1;
 }
 
