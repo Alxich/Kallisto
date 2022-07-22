@@ -28,9 +28,10 @@ Your theme only changes how all that information is displayed to your website vi
 
     - Gutenberg (additional)
     - Woocommerce (additional)
-    - ACF (advanced custom fields)
+    - ACF (advanced custom fields) (additional)
     - TI woocommerce wishlist (additional)
     - Classic editor (additional)
+    - Query Monitor (additional)
     
 <br>
 
@@ -60,6 +61,8 @@ Your theme only changes how all that information is displayed to your website vi
 * Woocommerce meta.
 * Woocommerce sharing.
 * Woocommerce excerpt.
+* Woocommerce result count.
+* Woocommerce catalog ordering.
 
 <br>
 
@@ -93,7 +96,7 @@ _GNU General Public License v2 or later_
 <br>
 
 
-    Version: 1.0 (19.07.2020)
+    Version: 1.0 (19.07.2022)
 
      - Added new README.md
      - Released: July 19, 2022
@@ -104,4 +107,4 @@ _GNU General Public License v2 or later_
      - Fixed files url`
      - Fixed scripts
      - Updated local files
-     
+     - Moved index.php to subfolder (root/core/components)

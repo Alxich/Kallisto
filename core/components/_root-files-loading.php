@@ -62,7 +62,7 @@ add_filter( 'frontpage_template_hierarchy', 'change_template_path' );
 add_filter( 'home_template_hierarchy', 'change_template_path' );
 
 // If you override the index hierarchy, be sure to add an index.php template in your custom template folder.
-// add_filter( 'index_template_hierarchy', 'change_template_path' );
+add_filter( 'index_template_hierarchy', 'change_template_path' );
 
 add_filter( 'page_template_hierarchy', 'change_template_path' );
 add_filter( 'paged_template_hierarchy', 'change_template_path' );
