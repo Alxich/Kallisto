@@ -108,3 +108,7 @@ _GNU General Public License v2 or later_
      - Fixed scripts
      - Updated local files
      - Moved index.php to subfolder (root/core/components)
+
+    Version: 1.0.1 (23.07.2022)
+
+     - Created welcome page with animation

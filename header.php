@@ -7,6 +7,7 @@
     <meta name="format-detection" content="date=no">
     <meta name="format-detection" content="address=no">
     <meta name="format-detection" content="email=no">
+    <title>Welcome to Kallisto</title>
     <?php wp_head(); ?>
 </head>
 
