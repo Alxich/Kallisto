@@ -1,6 +1,6 @@
 # **Kallisto** *(Gulp edition)*
 
-**Contributors:** Roman Dydnuk <br>
+**Contributors:** Alxich, Roman Dydnuk <br>
 **Requires at least:** WordPress 5.0 <br>
 **Tested up to:** WordPress 5.9 <br>
 **Requires PHP:** 5.6 <br>
